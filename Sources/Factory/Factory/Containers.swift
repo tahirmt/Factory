@@ -43,7 +43,7 @@ import Foundation
 ///  See <doc:Containers> for more information.
 public final class Container: SharedContainer {
     /// Define the default shared container.
-    public static let shared = Container()
+    @TaskLocal public static var shared = Container()
     /// Define the container's manager.
     public let manager: ContainerManager = ContainerManager()
     /// Public initializer
